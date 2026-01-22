@@ -1,40 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Basic HTML Form</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Entry</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background: #4a90e2;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 5px;
+      margin-top: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 15px;
+    }
+
+    .form-row > div {
+      flex: 1;
+    }
+
+    button {
+      background: #4a90e2;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #357ab8;
+    }
+  </style>
 </head>
 <body>
-  <h2>Student Information</h2>
-  <form action="/Done!" method="post">
-    <!-- Text input -->
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name" required><br><br>
+  <header>
+    <h1>Resume Entry Form</h1>
+    <p>Fill in your details below</p>
+  </header>
 
-    <!-- Email input -->
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
+  <main>
+    <form>
+      <!-- Personal Info -->
+      <h2>Personal Information</h2>
+      <div class="form-row">
+        <div>
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="fname" placeholder="John">
+        </div>
+        <div>
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lname" placeholder="Doe">
+        </div>
+      </div>
 
-    <!-- Radio buttons -->
-    <p>Gender:</p>
-    <input type="radio" id="male" name="gender" value="male">
-    <label for="male">Male</label><br>
-    <input type="radio" id="female" name="gender" value="female">
-    <label for="female">Female</label><br><br>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="john@example.com">
 
-    <!-- Dropdown -->
-    <label for="country">Country:</label><br>
-    <select id="country" name="country">
-      <option value="india">India</option>
-      <option value="usa">USA</option>
-      <option value="uk">UK</option>
-    </select><br><br>
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210">
 
-    <!-- Textarea -->
-    <label for="message">Message:</label><br>
-    <textarea id="message" name="message" rows="4" cols="30"></textarea><br><br>
+      <!-- Education -->
+      <h2>Education</h2>
+      <label for="degree">Degree</label>
+      <input type="text" id="degree" name="degree" placeholder="B.Tech in Computer Science">
 
-    <!-- Submit button -->
-    <input type="submit" value="Submit">
-  </form>
+      <label for="school">Institution</label>
+      <input type="text" id="school" name="school" placeholder="XYZ University">
+
+      <label for="gradyear">Graduation Year</label>
+      <input type="text" id="gradyear" name="gradyear" placeholder="2024">
+
+      <!-- Work Experience -->
+      <h2>Work Experience</h2>
+      <label for="role">Role</label>
+      <input type="text" id="role" name="role" placeholder="Frontend Developer">
+
+      <label for="company">Company</label>
+      <input type="text" id="company" name="company" placeholder="ABC Corp">
+
+      <label for="desc">Description</label>
+      <textarea id="desc" name="desc" placeholder="Describe your responsibilities and achievements..."></textarea>
+
+      <!-- Skills -->
+      <h2>Skills</h2>
+      <label for="skills">List your skills</label>
+      <input type="text" id="skills" name="skills" placeholder="React, SQL, CSS">
+
+      <!-- Submit -->
+      <button type="submit">Submit Resume</button>
+    </form>
+  </main>
 </body>
 </html>
