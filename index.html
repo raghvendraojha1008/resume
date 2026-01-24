@@ -1,77 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Resume Entry</title>
   <style>
     body {
       font-family: Arial, sans-serif;
+      background: #f0f0f0;
       margin: 0;
       padding: 0;
-      background: #f4f4f9;
-      color: #333;
     }
     header {
-      background: #4a90e2;
+      background: blue;
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 10px;
     }
     main {
-      max-width: 800px;
-      margin: 20px auto;
       background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
     }
     h2 {
-      border-bottom: 2px solid #eee;
-      padding-bottom: 5px;
       margin-top: 20px;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
+      border-bottom: 1px solid #ccc;
     }
     label {
-      font-weight: bold;
-      margin-bottom: 5px;
       display: block;
+      margin-top: 10px;
+      font-weight: bold;
     }
-    input, textarea, select {
+    input, textarea {
       width: 100%;
-      padding: 10px;
+      padding: 5px;
+      margin-top: 5px;
       border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 14px;
-    }
-    textarea {
-      resize: vertical;
-      min-height: 100px;
-    }
-    .form-row {
-      display: flex;
-      gap: 15px;
-    }
-    .form-row > div {
-      flex: 1;
     }
     button {
-      background: #4a90e2;
+      margin-top: 15px;
+      padding: 10px;
+      background: blue;
       color: white;
       border: none;
-      padding: 12px;
-      border-radius: 4px;
-      font-size: 16px;
       cursor: pointer;
     }
     button:hover {
-      background: #357ab8;
+      background: darkblue;
     }
   </style>
+  
 </head>
 <body>
   <header>
@@ -81,21 +59,16 @@
   <main>
     <form>
       <h2>Personal Information</h2>
-      <div class="form-row">
-        <div>
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" name="fname" placeholder="Prince ">
-        </div>
-        <div>
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="lname" placeholder="Raj">
-        </div>
-      </div>
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="fname" placeholder="Prince">
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lname" placeholder="Raj">
 
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="ram@gmail.com">
+      <input type="email" id="email" name="email" placeholder="prince@gmail.com">
       <label for="phone">Phone</label>
       <input type="tel" id="phone" name="phone" placeholder="+919876543210">
+
       <h2>Education</h2>
       <label for="degree">Degree</label>
       <input type="text" id="degree" name="degree" placeholder="B.Tech in Computer Science">
@@ -103,16 +76,19 @@
       <input type="text" id="school" name="school" placeholder="Delhi University">
       <label for="gradyear">Graduation Year</label>
       <input type="text" id="gradyear" name="gradyear" placeholder="2026">
+
       <h2>Work Experience</h2>
       <label for="role">Role</label>
       <input type="text" id="role" name="role" placeholder="Frontend Developer">
       <label for="company">Company</label>
       <input type="text" id="company" name="company" placeholder="IBM">
       <label for="desc">Description</label>
-      <textarea id="desc" name="desc" placeholder="Describe your work and achivementss."></textarea>
+      <textarea id="desc" name="desc" placeholder="Describe your work and achievements."></textarea>
+
       <h2>Skills</h2>
       <label for="skills">List your skills</label>
       <input type="text" id="skills" name="skills" placeholder="React, SQL, CSS">
+
       <button type="submit">Submit Resume</button>
     </form>
   </main>
